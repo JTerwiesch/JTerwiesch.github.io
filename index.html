@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="author" content="">
+    <!-- Title -->
+    <title>Niels Terwiesch</title>
+    <!-- CSS -->
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <!-- Javascript & JQuery -->
+    <script href="js/script.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Bootstrap -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+    <script>
+        $(document).ready(function(){ 
+            $("#niels-text").hide();
+            $("#jan-text").hide();
+            $("#mats-text").hide();
+            
+            
+            
+            //Col content
+            $("#left-content").hide();
+            $("#center-content").hide();
+            $("#right-content").hide();
+            $(".scroll-lock").click(function(){
+                $('html, body').css({
+                'overflow': 'hidden',
+                'height': '100%'
+                })
+            }); 
+            $(".close").click(function(){
+                $('html, body').css({
+                    'overflow': '',
+                    'height': '',
+                })
+            })
+            //Left/Niels Show and Hide content
+             $(".niels").hover(function(){
+                $("#niels-text").fadeIn(400);
+            }, function(){
+                $("#niels-text").fadeOut(400);
+                
+            });
+            
+           $(".niels").click(function(){
+            
+                $("#jan").fadeOut(400);
+                $("#mats").fadeOut(400);
+                $("#center").fadeOut(400);
+                $("#right").fadeOut(400);
+                $("#left-content").show(300);
+                
+            })
+           $(".left-content-hide").click(function(){
+               $("#left-content").hide(300);
+               $("#center").show(400);
+               $("#right").show(400);
+           })
+        //Jan Content
+             $(".jan").hover(function(){
+                $("#jan-text").fadeIn(400);
+            }, function(){
+                $("#jan-text").fadeOut(400);
+                
+            });
+        
+        $(".jan").click(function(){
+            
+             $("#mats").fadeOut(400);
+             $('#niels').fadeOut(400);
+             $("#left").fadeOut(400);
+             $("#right").fadeOut(400);
+             $("#center-content").show(300);
+        })
+         $(".center-content-hide").click(function(){
+               $("#center-content").hide(300);
+               $("#left").show(400);
+               $("#right").show(400);
+           })
+    //Mats Content
+           $(".mats").hover(function(){
+                $("#mats-text").fadeIn(400);
+            }, function(){
+                $("#mats-text").fadeOut(400);
+                
+            });
+         $(".mats").click(function(){
+            
+             $("#jan").fadeOut(400);
+             $('#niels').fadeOut(400);
+             $("#left").fadeOut(400);
+             $("#center").fadeOut(400);
+             $("#right-content").show(300);
+        })
+         $(".right-content-hide").click(function(){
+               $("#right-content").hide(300);
+               $("#left").show(400);
+               $("#center").show(400);
+           })
+         
+         
+        })
+        
+       
+    </script>
+</head>
+    <body>
+        <!-- Left/School -->
+        <div id="left">
+            <p class="main-text grow" id="niels-text">Niels</p>
+            <a href="#"><img class="main-imgs fade scroll-lock niels hvr-grow" style="top: 20%" src="assets/niels.png" draggable="false"></a>
+        </div>
+        <!-- Left/School Content -->
+        <div id="left-content" class="left-content">
+            <div id="left-div">
+                <a class="fade left-content-hide hvr-float"><h1>&larr; Niels Terwiesch</h1></a>
+                
+            <hr style="color: #ffffff;">
+           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum vitae nulla bibendum neque feugiat aliquam. Pellentesque vitae justo at sapien iaculis tempus vitae sed justo. Nam malesuada congue consectetur. In iaculis sem tellus, eu semper felis euismod at. Nam ac risus tempus lectus ultricies placerat ac id quam. Nulla sodales felis ac augue cursus scelerisque. Etiam velit libero, condimentum sit amet gravida at, gravida ac est. In ipsum elit, pellentesque lobortis pellentesque at, consectetur sit amet est. Fusce tellus purus, pretium nec eros nec, tempus vehicula tortor. Donec mi lectus, mollis eu dignissim a, suscipit sit amet purus. Ut lobortis, mauris vel interdum suscipit, sem dui fermentum neque, eu consectetur sapien diam eget quam. Vivamus molestie leo nibh, finibus volutpat eros tincidunt ac.</p>
+          
+        </div>
+        </div>
+        
+
+        <div id="center">
+            <p class="main-text grow" id="jan-text">Jan</p>
+            <a href="#"><img class="main-imgs fade scroll-lock jan hvr-grow" src="assets/jan.png" draggable="false"></a>
+        </div>
+        
+         <div id="center-content" class="center-content">
+            <div id="center-div">
+                <a class="fade center-content-hide hvr-float"><h1>&larr; Jan Terwiesch</h1></a>
+            <hr style="color: #ffffff;">
+           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum vitae nulla bibendum neque feugiat aliquam. Pellentesque vitae justo at sapien iaculis tempus vitae sed justo. Nam malesuada congue consectetur. In iaculis sem tellus, eu semper felis euismod at. Nam ac risus tempus lectus ultricies placerat ac id quam. Nulla sodales felis ac augue cursus scelerisque. Etiam velit libero, condimentum sit amet gravida at, gravida ac est. In ipsum elit, pellentesque lobortis pellentesque at, consectetur sit amet est. Fusce tellus purus, pretium nec eros nec, tempus vehicula tortor. Donec mi lectus, mollis eu dignissim a, suscipit sit amet purus. Ut lobortis, mauris vel interdum suscipit, sem dui fermentum neque, eu consectetur sapien diam eget quam. Vivamus molestie leo nibh, finibus volutpat eros tincidunt ac.</p>
+        </div>
+        </div>
+      
+        <div id="right">
+            <p class="main-text grow" id="mats-text">Mats</p>
+            <a href="#"><img class="main-imgs fade scroll-lock mats hvr-grow" src="assets/mats.png" draggable="false"></a>
+        </div>
+        
+          <div id="right-content" class="right-content">
+            <div id="right-div">
+                    
+                <a class="fade right-content-hide hvr-float"><h1>&larr; Mats Terwiesch</h1></a>
+            <hr style="color: #ffffff;">
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum vitae nulla bibendum neque feugiat aliquam. Pellentesque vitae justo at sapien iaculis tempus vitae sed justo. Nam malesuada congue consectetur. In iaculis sem tellus, eu semper felis euismod at. Nam ac risus tempus lectus ultricies placerat ac id quam. Nulla sodales felis ac augue cursus scelerisque. Etiam velit libero, condimentum sit amet gravida at, gravida ac est. In ipsum elit, pellentesque lobortis pellentesque at, consectetur sit amet est. Fusce tellus purus, pretium nec eros nec, tempus vehicula tortor. Donec mi lectus, mollis eu dignissim a, suscipit sit amet purus. Ut lobortis, mauris vel interdum suscipit, sem dui fermentum neque, eu consectetur sapien diam eget quam. Vivamus molestie leo nibh, finibus volutpat eros tincidunt ac.</p>
+    
+        </div>
+        </div>
+        <!-- Bellow/General 
+        <div id="bottom">
+            <p>Bellow</p>
+        </div>
+        -->
+
+    </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
